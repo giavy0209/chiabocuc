@@ -1,0 +1,137 @@
+/*=========== 00. RESET CSS ================ */	
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:before, :after  {
+    box-sizing: border-box;
+}
+a, span, :before, :after { 
+    display: inline-block; 
+}
+:focus {
+    outline: none;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+img {
+    max-width: 100%;
+}
+
+
+.container {
+    max-width: 1170px;
+    margin: 100px auto;
+    /* padding: 0 15px; */
+    /* height: 65vh; */
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3)
+}
+/*=========== 00. General ================ */	
+.row{
+    font-size: 0;
+    /* margin-left: -15px;
+    margin-right: -15px; */
+}
+.row [class*="hm-col-"],
+.row[class*="hm-column-"] .item{
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+
+.hm-column-3 .item{
+    width: 33.3333333%;
+}
+.hm-column-2 .item{
+    width: 50%;
+}
+.hm-column-1 .item{
+    width: 100%;
+}
+.va-t{
+    vertical-align: top;
+}
+.va-m{
+    vertical-align: middle;
+}
+.va-b{
+    vertical-align: bottom;
+}
+.d-inb{
+    display: inline-block !important;
+}
+.d-b{
+    display:block !important;
+}
+.clear::after{
+    content: " ";
+    display:block;
+    clear: both;
+}
+.pl-0{
+    padding-left: 0 !important; 
+}
+.pr-0{
+    padding-right: 0 !important;
+}
+[class*="img-"]{
+    display: block;
+    position: relative;
+}
+.img-1-1::before {
+    content: '';
+    display: block;
+    padding-top: 100%; 
+    background-color: red;
+}
+
+.img-1-2::before {
+    content: '';
+    display: block;
+    padding-top: 200%; 
+    background-color: red;
+}
+.img-2-1::before {
+    content: '';
+    display: block;
+    padding-top: 50%; 
+    background-color: red;
+}
+[class*="img-"] img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container [class*="img-"]::after{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 10;
+    pointer-events: none;
+    transition: all .3s ease;
+    background-color: rgba(0, 139, 139, 0);
+}
+.container [class*="img-"]:hover::after{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 139, 139, 0.7);
+}
